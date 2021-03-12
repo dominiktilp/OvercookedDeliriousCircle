@@ -13,7 +13,7 @@ const ExampleComponent = () => {
   useEffect(getData,[]);
 
   function getData(){
-    let data = fetch('/todos').then(response=>response.json()).then(data=>setTodos(transformData(data)));
+    fetch('/todos').then(response=>response.json()).then(data=>setTodos(transformData(data)));
   }
 
   const [todos,setTodos] = useState([]);

@@ -420,7 +420,7 @@ var ExampleComponent = function ExampleComponent() {
   (0, _react.useEffect)(getData, []);
 
   function getData() {
-    var data = fetch('/todos').then(function (response) {
+    fetch('/todos').then(function (response) {
       return response.json();
     }).then(function (data) {
       return setTodos(transformData(data));
